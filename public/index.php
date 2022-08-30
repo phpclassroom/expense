@@ -11,14 +11,12 @@ define('VIEWS_PATH', $root . 'views' . DIRECTORY_SEPARATOR);
 
 require APP_PATH . 'App.php';
 
-$files = getTransactionFiles(FILES_PATH);
+// code goes here
 
-$transactions = [];
+// get all files from directory
 
-foreach ($files as $file) {
-    $transactions = array_merge($transactions, getTransactions($file, 'extractTransaction'));
-}
+// for each file, add rows to an array
 
-$totals = calculateTotals($transactions);
+// calculate the totals based on the composition of the array
 
 require VIEWS_PATH . 'transactions.php';
